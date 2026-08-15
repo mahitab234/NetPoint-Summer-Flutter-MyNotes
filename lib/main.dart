@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'core/repositories/note_repository.dart';
 import 'features/home/screens/home_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
-void main() {
+void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+
+  await NotesRepository.instance.init();
+
   runApp(const MyNotes());
   FlutterNativeSplash.remove();
 }
