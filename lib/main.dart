@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_notes/features/auth/screens/sign_in_screen.dart';
 import 'core/repositories/note_repository.dart';
-import 'features/home/screens/home_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
@@ -26,7 +26,7 @@ class MyNotes extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return const MaterialApp(
-          home: HomeScreen(),
+          home: SignInScreen(),
           title: 'My Notes',
           debugShowCheckedModeBanner: false,
         );
