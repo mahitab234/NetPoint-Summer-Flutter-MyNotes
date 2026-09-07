@@ -12,6 +12,15 @@ class HomeAppBarView extends StatelessWidget implements PreferredSizeWidget{
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      actions: [
+        IconButton(
+            onPressed: (){
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.logout, color: AppColors.red, size: 25.sp)
+        )
+      ],
+      actionsPadding: EdgeInsets.only(right: 10.w),
       backgroundColor: AppColors.white,
       centerTitle: true,
       leading: Icon(Icons.edit_note_outlined, color: AppColors.primary, size: 30.sp),
