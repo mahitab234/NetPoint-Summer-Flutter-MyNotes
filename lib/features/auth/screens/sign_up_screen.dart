@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:my_notes/features/auth/screens/sign_in_screen.dart';
+import '../views/auth_button_view.dart';
 import '../views/auth_text_field_view.dart';
 import '../widgets/auth_footer.dart';
 import '../widgets/auth_welcome.dart';
+import 'sign_in_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -68,6 +69,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   passwordController.text == confirmPasswordController.text?
                     null : 'Passwords do not match!',
               ),
+
+              AuthButtonView(text: 'Sign Up'),
 
               AuthFooter(
                 footerText: "Already have account? ",

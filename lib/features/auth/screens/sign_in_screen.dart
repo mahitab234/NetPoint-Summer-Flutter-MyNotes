@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:my_notes/features/auth/screens/sign_up_screen.dart';
-import 'package:my_notes/features/auth/widgets/auth_footer.dart';
 import '../../../core/themes/app_colors.dart';
+import '../views/auth_button_view.dart';
 import '../views/auth_text_field_view.dart';
+import '../widgets/auth_footer.dart';
 import '../widgets/auth_welcome.dart';
+import 'sign_up_screen.dart';
 
 class SignInScreen extends StatefulWidget {
 
@@ -59,6 +60,8 @@ class _SignInScreenState extends State<SignInScreen> {
                   passwordController.text.trim().isNotEmpty?
                     null : "Enter your password!",
               ),
+
+              AuthButtonView(text: 'Sign In'),
 
               AuthFooter(
                 footerText: "Don't have account? ",
